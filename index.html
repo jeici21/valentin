@@ -70,7 +70,7 @@
       if (noClicks < frases.length) $("#btn-no").text(frases[noClicks]);
       else $("#btn-no").text("¿Seguro que no?");
       noClicks++;
-      $("#btn-si").css('font-size', (16 + noClicks * 10) + "px")
+      $("#btn-si").css('font-size', `${16 + noClicks * 10}px`)
     })
     $('#btn-si').on('click', () => {
       $('body').html(`
