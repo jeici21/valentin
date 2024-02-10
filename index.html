@@ -5,49 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>¿Quieres ser mi San Valentín?</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: pink;
-      color: darkmagenta;
-    }
-
-    #btn-si,
-    #btn-no {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin: 10px;
-      cursor: pointer;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-
-    #btn-si {
-      background-color: green;
-    }
-
-    #btn-no {
-      background-color: red;
-    }
-
-    .animate {
-      animation: changeSizeAndColor 1s infinite alternate;
-    }
-
-    @keyframes changeSizeAndColor {
-      0% {
-        font-size: 40px;
-        color: darkmagenta;
-      }
-
-      100% {
-        font-size: 80px;
-        color: rgb(0, 128, 17);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -60,25 +18,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="arrays.js"></script>
-  <script>
-    let noClicks = 0;
-    let i = 0;
-    $('#btn-no').on('click', () => {
-      $('#gif').html(`<img src=${gifsTristes[i]} alt="Gif" width="200" height="200">`)
-      i++;
-      if (i >= gifsTristes.length) i = 0;
-      $("#btn-no").text(frases[noClicks]);
-      noClicks++;
-      if (noClicks >= frases.length) noClicks = 0;
-      $("#btn-si").css('font-size', `${16 + noClicks * 10}px`)
-    })
-    $('#btn-si').on('click', () => {
-      $('body').html(`
-        <img src="https://media.tenor.com/NsouEvrISgQAAAAi/love.gif" alt="Gif" width="200" height="200">
-        <h1 class="animate">¡AAAAAAH MUERO DE AMOR!</h1>
-      `)
-    })
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>

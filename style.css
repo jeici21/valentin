@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: pink;
+  color: darkmagenta;
+}
+
+#btn-si,
+#btn-no {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#btn-si {
+  background-color: green;
+}
+
+#btn-no {
+  background-color: red;
+}
+
+.animate {
+  animation: changeSizeAndColor 1s infinite alternate;
+}
+
+@keyframes changeSizeAndColor {
+  0% {
+    font-size: 40px;
+    color: darkmagenta;
+  }
+
+  100% {
+    font-size: 80px;
+    color: rgb(0, 128, 17);
+  }
+}
